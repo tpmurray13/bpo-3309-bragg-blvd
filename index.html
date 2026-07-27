@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3309 Bragg Blvd — Broker Price Opinion (Draft)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.5rem);
+      --space-1: .25rem; --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem;
+      --color-bg:#ffffff; --color-surface:#ffffff; --color-surface-2:#eaf2ed; --color-border:#e1ded6; --color-text:#333333; --color-text-muted:#6b6f6c;
+      --color-primary:#17613c; --color-primary-2:#d9ebe1; --color-band:#a3701f; --color-band-soft:#f2e6d3;
+      --radius-md:.5rem; --radius-lg:.9rem; --radius-xl:1.2rem;
+      --shadow-sm:0 1px 2px rgba(0,0,0,.06); --shadow-md:0 8px 24px rgba(0,0,0,.08);
+      --font-display:'Outfit', system-ui, sans-serif; --font-body:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0} html{scroll-behavior:smooth} body{font-family:var(--font-body);font-size:var(--text-base);color:var(--color-text);background:var(--color-bg);line-height:1.6}
+    a{color:var(--color-primary)} .container{max-width:1100px;margin:0 auto;padding:0 var(--space-4)}
+    .topbar{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:2px solid var(--color-primary);z-index:20}
+    .topbar-inner{display:flex;justify-content:space-between;align-items:center;padding:var(--space-3) 0;flex-wrap:wrap;gap:var(--space-2)}
+    .logo{display:flex;gap:var(--space-3);align-items:center;font-weight:600}
+    .logo img{height:42px;width:auto;display:block}
+    .hero{padding:var(--space-16) 0 var(--space-12)}
+    .eyebrow{font-size:var(--text-sm);letter-spacing:.12em;text-transform:uppercase;color:var(--color-text-muted);margin-bottom:var(--space-3)}
+    h1,h2,h3{font-family:var(--font-display);line-height:1.08;font-weight:700;color:var(--color-primary)}
+    h1{font-size:var(--text-2xl);max-width:18ch;margin-bottom:var(--space-4)} h2{font-size:var(--text-xl);margin-bottom:var(--space-5)} h3{font-size:var(--text-lg);margin-bottom:var(--space-3)}
+    .lede{max-width:68ch;color:var(--color-text-muted)}
+    .grid{display:grid;grid-template-columns:1.3fr .9fr;gap:var(--space-8);align-items:start}
+    .card{background:var(--color-surface);border:1px solid rgba(31,35,32,.12);border-radius:var(--radius-xl);padding:var(--space-6);box-shadow:var(--shadow-sm)}
+    .stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-4);margin-top:var(--space-8)}
+    .stat{background:var(--color-surface-2);border-radius:var(--radius-lg);padding:var(--space-4)} .stat-label{font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em;color:var(--color-text-muted)} .stat-value{font-size:var(--text-lg);font-weight:700;margin-top:.2rem;color:var(--color-primary)}
+    section{padding:var(--space-10) 0}
+    section.alt{background:var(--color-surface-2)}
+    .table{width:100%;border-collapse:collapse;font-size:var(--text-sm)} .table th,.table td{padding:.85rem .6rem;border-bottom:1px solid rgba(31,35,32,.1);text-align:left;vertical-align:top} .table th{color:var(--color-text-muted);font-weight:600;white-space:nowrap}
+    .table-wrap{overflow-x:auto}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8)}
+    .pill{display:inline-block;background:var(--color-primary-2);color:var(--color-primary);padding:.35rem .7rem;border-radius:999px;font-size:var(--text-xs);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .pill-band{display:inline-block;background:var(--color-band-soft);color:var(--color-band);padding:.35rem .7rem;border-radius:999px;font-size:var(--text-xs);font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .pill-outline{display:inline-block;border:1px solid rgba(31,35,32,.18);color:var(--color-text-muted);padding:.3rem .65rem;border-radius:999px;font-size:var(--text-xs);font-weight:600;margin:.15rem .25rem .15rem 0}
+    .hero-photo{width:100%;border-radius:var(--radius-xl);box-shadow:var(--shadow-md);display:block;margin-bottom:var(--space-6);object-fit:cover;max-height:360px}
+    .terms-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--space-4)}
+    .terms-grid .stat-value{color:var(--color-band)}
+    .status-card{border:1px dashed var(--color-band);background:var(--color-band-soft)}
+    .status-card h2{color:var(--color-band)}
+    .note{font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-4)}
+    footer{padding:var(--space-10) 0;background:var(--color-primary);color:#ffffff;font-size:var(--text-sm)}
+    .footer-inner{display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap}
+    .footer-logo{height:36px;width:auto;filter:brightness(0) invert(1)}
+    .disclaimer{background:var(--color-surface-2);border-radius:var(--radius-lg);padding:var(--space-5);font-size:var(--text-sm);color:var(--color-text-muted);margin-top:var(--space-6)}
+    ul.checklist{list-style:none;margin-top:var(--space-3)}
+    ul.checklist li{padding:.3rem 0 .3rem 1.6rem;position:relative;font-size:var(--text-sm)}
+    ul.checklist li::before{content:'✓';position:absolute;left:0;color:var(--color-primary);font-weight:700}
+    ul.checklist.pending li::before{content:'○';color:var(--color-band)}
+    @media (max-width: 820px){.grid,.two-col,.terms-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="logo">
+        <img src="assets/gm-logo.svg" alt="Grant-Murray Real Estate" />
+      </div>
+      <div class="pill">Prepared for Mary Pyche · 3309 Bragg Blvd, LLC</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container grid">
+        <div>
+          <div class="eyebrow">Broker Price Opinion (Draft) · For Sale &amp; For Lease · Fayetteville, NC</div>
+          <h1>3309 Bragg Blvd</h1>
+          <img class="hero-photo" src="assets/hero.jpg" alt="3309 Bragg Blvd, Fayetteville NC — former Cape Fear Animal Hospital building exterior" />
+          <p class="lede">Standalone single-story former veterinary/medical building on Bragg Blvd (former Cape Fear Animal Hospital), currently marketed for lease and now being added as a for-sale listing. The building totals 7,265 SF including approximately 1,600 SF of kennel and covered storage space; 5,647 SF is heated/finished office-medical space. Per Grant-Murray practice, this opinion's per-SF metrics are based on the 5,647 SF heated area, not the 7,265 SF gross total.</p>
+          <div class="stats">
+            <div class="stat"><div class="stat-label">Heated / finished area</div><div class="stat-value">5,647 SF</div></div>
+            <div class="stat"><div class="stat-label">Total area (incl. kennels)</div><div class="stat-value">7,265 SF</div></div>
+            <div class="stat"><div class="stat-label">Current lease rate</div><div class="stat-value">$19.50/SF NNN</div></div>
+            <div class="stat"><div class="stat-label">Sale opinion of value</div><div class="stat-value">Pending</div></div>
+          </div>
+        </div>
+        <aside class="card status-card">
+          <h2>Status of this opinion</h2>
+          <p class="note" style="margin-top:0">This is a working draft. It sets up the dual sale/lease listing framework and proposed terms; valuation and comps are being added next.</p>
+          <ul class="checklist">
+            <li>Subject property details pulled from the lease listing agreement and floor plan</li>
+            <li>Current lease marketing terms confirmed</li>
+            <li>Proposed sale listing terms set per broker instruction</li>
+          </ul>
+          <ul class="checklist pending">
+            <li>Comparable sales &amp; lease comps</li>
+            <li>Opinion of value / recommended list price</li>
+            <li>Market conditions snapshot</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Subject property summary</h2>
+        <div class="card table-wrap">
+          <table class="table">
+            <tr><th>Address</th><td>3309 Bragg Blvd, Fayetteville, NC 28303 (cross street: William Clark Rd)</td></tr>
+            <tr><th>Parcel / PIN</th><td>0418-92-3546 — Property description: "3309 Bragg Blvd Lt &amp; Hospital"</td></tr>
+            <tr><th>Owner / Client</th><td>3309 Bragg Blvd, LLC — Mary Pyche, 289 Garden St, Lake Helen, FL 32744</td></tr>
+            <tr><th>Year built / renovated</th><td>1949 / 1999 <span class="note" style="display:inline">(per LoopNet marketing listing)</span></td></tr>
+            <tr><th>Floors</th><td>1</td></tr>
+            <tr><th>Heated / finished area</th><td><strong>5,647 SF</strong> — used as the basis for all $/SF valuation metrics in this opinion</td></tr>
+            <tr><th>Total building area</th><td>7,265 SF gross, including ~1,600 SF of kennel and covered storage space (not heated)</td></tr>
+            <tr><th>Parking ratio</th><td>3.99 / 1,000 SF</td></tr>
+            <tr><th>Prior / current use</th><td>Former Cape Fear Animal Hospital (veterinary clinic) — reception with dual front-desk stations, 6–8 private offices, exam/treatment rooms, dedicated radiology suite, fully enclosed surgery room, A-Ward &amp; C-Ward, isolation room, kitchenette, restrooms, indoor kennel run, and fenced outdoor exercise/kennel area</td></tr>
+            <tr><th>Adaptability</th><td>Layout and infrastructure are well-suited to veterinary, dental, or general medical reuse; also convertible to general office/flex</td></tr>
+          </table>
+        </div>
+        <p class="note">Building data compiled from the Exclusive Right to Lease Listing Agreement (signed 12/1/2025), the Magicplan floor plan sketch, and the property's active LoopNet marketing listing.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Current lease listing</h2>
+        <div class="card table-wrap">
+          <table class="table">
+            <tr><th>Listing type</th><td>Exclusive right to lease</td></tr>
+            <tr><th>Term</th><td>Through 11/30/2026; auto-renews for successive 12-month periods absent 60-day written notice</td></tr>
+            <tr><th>Asking rent</th><td>$19.50/SF/YR NNN (≈ $1.63/SF/mo, $141,668/yr, $11,806/mo on 7,265 SF gross)</td></tr>
+            <tr><th>Taxes / insurance / operating expenses / maintenance</th><td>NNN (tenant reimburses)</td></tr>
+            <tr><th>Utilities</th><td>Paid by tenant</td></tr>
+            <tr><th>Possession</th><td>At lease signing</td></tr>
+            <tr><th>Lease commission</th><td>6.0% of total rent (first 60 months) if a cooperating tenant broker is involved; 4.0% if Grant-Murray Real Estate procures the tenant with no cooperating broker — 50% payable at lease execution, 50% at rent commencement</td></tr>
+            <tr><th>Marketing expense to Client</th><td>None (N/A on the listing agreement)</td></tr>
+          </table>
+        </div>
+        <p class="note">Source: Exclusive Right to Lease Listing Agreement (NC Association of REALTORS® Standard Form 572), executed 12/1/2025 between Grant-Murray Real Estate, LLC and 3309 Bragg Blvd, LLC.</p>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Proposed sale listing terms</h2>
+        <div class="card">
+          <div class="terms-grid">
+            <div class="stat"><div class="stat-label">Listing type</div><div class="stat-value">Exclusive right to sell</div></div>
+            <div class="stat"><div class="stat-label">Term</div><div class="stat-value">1 year</div></div>
+            <div class="stat"><div class="stat-label">List price</div><div class="stat-value">TBD — pending valuation</div></div>
+            <div class="stat"><div class="stat-label">Commission — co-brokered</div><div class="stat-value">6%</div></div>
+            <div class="stat"><div class="stat-label">Commission — no other broker</div><div class="stat-value">4%</div></div>
+            <div class="stat"><div class="stat-label">Marketing expense to Client</div><div class="stat-value">$0 — GMRE pays own costs</div></div>
+          </div>
+          <p class="note" style="margin-top:1.5rem">Grant-Murray Real Estate, LLC proposes a new 1-year exclusive right-to-sell listing on 3309 Bragg Blvd, to run concurrently with the existing lease listing. Commission is 6% of the gross sale price where a cooperating buyer's broker is involved, and 4% where Grant-Murray Real Estate procures the buyer directly with no cooperating broker. Grant-Murray Real Estate, LLC will pay all of its own marketing costs for this listing — the Client will not be billed separately for marketing expenses.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Valuation &amp; comparable sales</h2>
+        <div class="card">
+          <span class="pill-band">Pending</span>
+          <p style="margin-top:1rem">Comparable sales, comparable leases, and the resulting opinion of value / recommended list price have not yet been compiled for this draft. Per instruction, once added, all $/SF valuation metrics will be calculated against the <strong>5,647 SF heated area</strong> — not the 7,265 SF total area that includes the unheated kennel and storage space.</p>
+          <p class="note">This section will be updated with closed sales comps, on-market comps, a price-range graphic, and a blended opinion of value once that data is compiled.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container two-col">
+        <div class="card">
+          <h3>Prepared by</h3>
+          <p><strong>Patrick Murray, CCIM, SIOR</strong><br/>Broker / Owner<br/>Grant-Murray Real Estate, LLC</p>
+          <p style="margin-top:.75rem">150 N. McPherson Church Rd<br/>Fayetteville, NC 28303</p>
+          <p style="margin-top:.75rem">O: 910.829.1617<br/>patrick@grantmurrayre.com<br/><a href="https://www.grantmurrayre.com" target="_blank" rel="noopener">grantmurrayre.com</a></p>
+        </div>
+        <div class="card">
+          <h3>Prepared for</h3>
+          <p><strong>Mary Pyche</strong><br/>3309 Bragg Blvd, LLC<br/>289 Garden St, Lake Helen, FL 32744</p>
+          <p class="disclaimer">This Broker Price Opinion (BPO) is prepared by Patrick Murray, CCIM, SIOR, of Grant-Murray Real Estate, LLC. It is a draft in progress — comparable sales and a final opinion of value have not yet been added. It is not an appraisal and does not constitute a certified valuation under USPAP. Value conclusions, once added, will be based on market comparable data and the broker's professional judgment as of the date noted, and are subject to verification, changing market conditions, and further due diligence.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <img class="footer-logo" src="assets/gm-logo.svg" alt="Grant-Murray Real Estate" />
+      <div>
+        Draft Broker Price Opinion — comps and valuation pending.<br/>
+        Prepared by Grant-Murray Real Estate | CCIM | SIOR
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
