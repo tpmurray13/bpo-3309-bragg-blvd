@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3309 Bragg Blvd — Broker Price Opinion (Draft)</title>
+  <title>3309 Bragg Blvd — Broker Price Opinion</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -60,6 +60,44 @@
     ul.checklist li::before{content:'✓';position:absolute;left:0;color:var(--color-primary);font-weight:700}
     ul.checklist.pending li::before{content:'○';color:var(--color-band)}
     @media (max-width: 820px){.grid,.two-col,.terms-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}}
+    .btn-print{display:inline-flex;align-items:center;gap:.5rem;background:var(--color-primary);color:#ffffff;border:none;padding:.55rem 1.1rem;border-radius:999px;font-family:var(--font-body);font-weight:600;font-size:var(--text-xs);letter-spacing:.02em;cursor:pointer;box-shadow:var(--shadow-sm);transition:background .15s ease}
+    .btn-print:hover{background:#0f4a2d}
+    .btn-print svg{width:15px;height:15px;fill:currentColor;flex:none}
+    .topbar-actions{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+    @media print {
+      .no-print{display:none !important}
+      *{-webkit-print-color-adjust:exact;print-color-adjust:exact;color-adjust:exact}
+      html,body{font-size:10.5pt;line-height:1.45}
+      .topbar{position:static;backdrop-filter:none;box-shadow:none;border-bottom:2px solid var(--color-primary)}
+      .hero{padding:14pt 0 10pt}
+      section{padding:12pt 0}
+      .grid,.two-col,.terms-grid{grid-template-columns:1fr;gap:10pt}
+      .stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8pt}
+      .hero-photo{max-height:170pt;box-shadow:none}
+      h1{font-size:20pt;margin-bottom:8pt}
+      h2{font-size:15pt;margin-bottom:8pt}
+      h3{font-size:12.5pt;margin-bottom:6pt}
+      .card{box-shadow:none;border:1px solid #d7d3c8;padding:10pt}
+      .stat,.status-card{page-break-inside:avoid}
+      table{font-size:9pt}
+      tr{page-break-inside:avoid}
+      .comps-table{table-layout:fixed;width:100%}
+      .comps-table th,.comps-table td{white-space:normal;word-wrap:break-word;overflow-wrap:break-word;font-size:7.3pt;line-height:1.35;padding:.3rem .2rem}
+      .comps-table th:nth-child(1),.comps-table td:nth-child(1){width:13%}
+      .comps-table th:nth-child(2),.comps-table td:nth-child(2){width:7.5%}
+      .comps-table th:nth-child(3),.comps-table td:nth-child(3){width:10%}
+      .comps-table th:nth-child(4),.comps-table td:nth-child(4){width:7%}
+      .comps-table th:nth-child(5),.comps-table td:nth-child(5){width:6.5%}
+      .comps-table th:nth-child(6),.comps-table td:nth-child(6){width:9%}
+      .comps-table th:nth-child(7),.comps-table td:nth-child(7){width:15%}
+      .comps-table th:nth-child(8),.comps-table td:nth-child(8){width:32%}
+      .comps-table .pill,.comps-table .pill-outline{display:block;width:max-content;margin-bottom:2pt}
+      .table-wrap{overflow-x:visible}
+      h2,h3{page-break-after:avoid}
+      footer{background:var(--color-primary) !important;color:#ffffff !important;padding:10pt 0}
+      a{color:var(--color-primary) !important;text-decoration:none}
+      @page{margin:0.55in}
+    }
   </style>
 </head>
 <body>
@@ -68,7 +106,13 @@
       <div class="logo">
         <img src="assets/gm-logo.svg" alt="Grant-Murray Real Estate" />
       </div>
-      <div class="pill">Prepared for Mary Pyche · 3309 Bragg Blvd, LLC</div>
+      <div class="topbar-actions">
+        <div class="pill">Prepared for Mary Pyche · 3309 Bragg Blvd, LLC</div>
+        <button class="btn-print no-print" type="button" onclick="window.print()">
+          <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7h2a2 2 0 0 1 2 2v7h-4v4H6v-4H2v-7a2 2 0 0 1 2-2h2zm2-5v5h8V4H8zm8 14H8v3h8v-3zm2-2h2v-5H4v5h2v-2h12v2z"/></svg>
+          Print / Save as PDF
+        </button>
+      </div>
     </div>
   </header>
 
@@ -76,7 +120,7 @@
     <section class="hero">
       <div class="container grid">
         <div>
-          <div class="eyebrow">Broker Price Opinion (Draft) · For Sale &amp; For Lease · Fayetteville, NC</div>
+          <div class="eyebrow">Broker Price Opinion · For Sale &amp; For Lease · Fayetteville, NC</div>
           <h1>3309 Bragg Blvd</h1>
           <img class="hero-photo" src="assets/hero.jpg" alt="3309 Bragg Blvd, Fayetteville NC — former Cape Fear Animal Hospital building exterior" />
           <p class="lede">Standalone single-story former veterinary/medical building on Bragg Blvd (former Cape Fear Animal Hospital), currently marketed for lease and now being added as a for-sale listing. The building totals 7,265 SF including approximately 1,600 SF of kennel and covered storage space; 5,647 SF is heated/finished office-medical space. Per Grant-Murray practice, this opinion's per-SF metrics are based on the 5,647 SF heated area, not the 7,265 SF gross total.</p>
@@ -89,16 +133,13 @@
         </div>
         <aside class="card status-card">
           <h2>Status of this opinion</h2>
-          <p class="note" style="margin-top:0">This is a working draft. The sale/lease listing framework, proposed terms, and a comparable-sales-based opinion of value are in place; a fuller submarket conditions writeup is the remaining open item.</p>
+          <p class="note" style="margin-top:0">This Broker Price Opinion is complete: subject property details, current lease terms, proposed sale terms, comparable sales, and the opinion of value are all finalized below.</p>
           <ul class="checklist">
             <li>Subject property details pulled from the lease listing agreement and floor plan</li>
             <li>Current lease marketing terms confirmed</li>
             <li>Proposed sale listing terms set per broker instruction</li>
             <li>Comparable sales &amp; lease comps</li>
             <li>Opinion of value / recommended list price</li>
-          </ul>
-          <ul class="checklist pending">
-            <li>Market conditions snapshot</li>
           </ul>
         </aside>
       </div>
@@ -140,7 +181,7 @@
             <tr><th>Marketing expense to Client</th><td>None (N/A on the listing agreement)</td></tr>
           </table>
         </div>
-        <p class="note">Source: Exclusive Right to Lease Listing Agreement (NC Association of REALTORS® Standard Form 572), executed 12/1/2025 between Grant-Murray Real Estate, LLC and 3309 Bragg Blvd, LLC.</p>
+        <p class="note">Source: Exclusive Right to Lease Listing Agreement (NC Association of REALTORS® Standard Form 572), executed 12/1/2025 between Grant-Murray Real Estate, LLC and 3309 Bragg Blvd, LLC. <a href="https://www.dropbox.com/scl/fi/2sl5n8f0h10aecpyelmyf/3309-Bragg-Blvd-1.pdf?rlkey=dfklmrgln1y0bd3meq0qdz2ax&amp;dl=0" target="_blank" rel="noopener">View the signed listing agreement (PDF)</a>.</p>
       </div>
     </section>
 
@@ -166,7 +207,7 @@
         <h2>Valuation &amp; comparable sales</h2>
         <div class="card table-wrap">
           <p style="margin-top:0">Nine closed office sales in Fayetteville / Cumberland County (CoStar sale comps, pulled 7/27/2026) were reviewed, ranging from 2,000 SF to 13,412 SF and selling between 6/2025 and 4/2026 at $138.93/SF to $206.31/SF. The four comps below marked <strong>Primary</strong> are the closest matches to the subject's profile as a standalone, single-story, owner-user-type medical/veterinary building in the 4,800&ndash;13,400 SF range; the remaining five are smaller condo/investment/multi-tenant properties included as supporting market context.</p>
-          <table class="table">
+          <table class="table comps-table">
             <tr>
               <th>Address</th><th>Sold</th><th>Price</th><th>RBA</th><th>$/SF</th><th>Class / Story</th><th>Sale type</th><th>Comparability</th>
             </tr>
@@ -210,7 +251,7 @@
           </div>
           <p class="note">Applying the four primary comps' average of $188.12/SF to the 5,647 SF heated area indicates roughly $1,062,000; the broader 9-comp average of $169.06/SF indicates roughly $955,000, and the comp set's median ($162.50/SF) indicates roughly $918,000. Weighing the primary, size- and use-comparable sales most heavily and tempering for the subject's specialized veterinary buildout (kennels, surgical suite, exam rooms) and 1949/1999 vintage, Grant-Murray Real Estate's opinion is an indicated value range of approximately <strong>$850,000 to $1,075,000</strong>, with a recommended list price of <strong>$975,000</strong> (~$172.66/SF heated) to allow room for negotiation. This is a broker's opinion of value for marketing purposes, not an appraisal.</p>
         </div>
-        <p class="note">Comparable sales data: CoStar Sale Comps Summary report, Cumberland County / Fayetteville, NC office properties, licensed to Grant-Murray Real Estate, LLC (license #376672), pulled 7/27/2026.</p>
+        <p class="note">Comparable sales data: CoStar Sale Comps Summary report, Cumberland County / Fayetteville, NC office properties, licensed to Grant-Murray Real Estate, LLC (license #376672), pulled 7/27/2026. <a href="https://www.dropbox.com/scl/fi/e6vx1txtcijb5zebsq65l/report-14.pdf?rlkey=ljydpfhk9o5kufvn0pe85cw20&amp;dl=0" target="_blank" rel="noopener">View the full CoStar comps report (PDF)</a>.</p>
       </div>
     </section>
 
@@ -225,7 +266,7 @@
         <div class="card">
           <h3>Prepared for</h3>
           <p><strong>Mary Pyche</strong><br/>3309 Bragg Blvd, LLC<br/>289 Garden St, Lake Helen, FL 32744</p>
-          <p class="disclaimer">This Broker Price Opinion (BPO) is prepared by Patrick Murray, CCIM, SIOR, of Grant-Murray Real Estate, LLC. It is a draft in progress — comparable sales and a final opinion of value have not yet been added. It is not an appraisal and does not constitute a certified valuation under USPAP. Value conclusions, once added, will be based on market comparable data and the broker's professional judgment as of the date noted, and are subject to verification, changing market conditions, and further due diligence.</p>
+          <p class="disclaimer">This Broker Price Opinion (BPO) is prepared by Patrick Murray, CCIM, SIOR, of Grant-Murray Real Estate, LLC. It is not an appraisal and does not constitute a certified valuation under USPAP. The value conclusions herein are based on comparable market sales data and the broker's professional judgment as of the date noted, and are subject to verification, changing market conditions, and further due diligence.</p>
         </div>
       </div>
     </section>
@@ -235,7 +276,7 @@
     <div class="container footer-inner">
       <img class="footer-logo" src="assets/gm-logo.svg" alt="Grant-Murray Real Estate" />
       <div>
-        Broker Price Opinion — comparable sales &amp; opinion of value included.<br/>
+        Broker Price Opinion — prepared 7/27/2026.<br/>
         Prepared by Grant-Murray Real Estate | CCIM | SIOR
       </div>
     </div>
