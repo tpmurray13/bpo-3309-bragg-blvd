@@ -92,6 +92,13 @@
       .comps-table th:nth-child(7),.comps-table td:nth-child(7){width:15%}
       .comps-table th:nth-child(8),.comps-table td:nth-child(8){width:32%}
       .comps-table .pill,.comps-table .pill-outline{display:block;width:max-content;margin-bottom:2pt}
+      .adj-table{table-layout:fixed;width:100%}
+      .adj-table th,.adj-table td{white-space:normal;word-wrap:break-word;overflow-wrap:break-word;font-size:7.3pt;line-height:1.35;padding:.3rem .2rem}
+      .adj-table th:nth-child(1),.adj-table td:nth-child(1){width:17%}
+      .adj-table th:nth-child(2),.adj-table td:nth-child(2){width:9%}
+      .adj-table th:nth-child(3),.adj-table td:nth-child(3){width:8%}
+      .adj-table th:nth-child(4),.adj-table td:nth-child(4){width:57%}
+      .adj-table th:nth-child(5),.adj-table td:nth-child(5){width:9%}
       .table-wrap{overflow-x:visible}
       h2,h3{page-break-after:avoid}
       footer{background:var(--color-primary) !important;color:#ffffff !important;padding:10pt 0}
@@ -230,6 +237,45 @@
             </tr>
           </table>
         </div>
+        <div class="card table-wrap" style="margin-top:var(--space-6)">
+          <h3 style="margin-bottom:var(--space-4)">Comparable sales adjustment matrix</h3>
+          <p style="margin-top:0">The unadjusted comps above are also formalized here into a sales-comparison adjustment grid, expressing each comp's variance from the subject (5,647 SF heated, 1949-built/1999-renovated, single-story, specialized veterinary buildout, Bragg Blvd corridor) as a net percentage adjustment. Positive adjustments mean the comp's raw $/SF understates its value relative to the subject (adjusted upward); negative adjustments mean the comp's raw $/SF overstates its value relative to the subject (adjusted downward). This formalizes &mdash; and is consistent with &mdash; the qualitative weighting already applied in the Opinion of Value below.</p>
+          <table class="table adj-table">
+            <tr>
+              <th>Comp property</th><th>Unadj. $/SF</th><th>Adj. %</th><th>What was adjusted</th><th>Adj. $/SF</th>
+            </tr>
+            <tr>
+              <td><strong>6201 Raeford Rd</strong></td><td>$202.90</td><td>&minus;8%</td><td>Size (8% smaller than subject, smaller buildings command a $/SF premium, &minus;5%); functional utility (generic space lacks subject's specialized medical/vet buildout, &minus;3%)</td><td>$186.67</td>
+            </tr>
+            <tr>
+              <td><strong>609 Executive Plz</strong></td><td>$206.31</td><td>&minus;15%</td><td>Location (secondary office park vs. Bragg Blvd corridor, +2%); size (14% smaller, &minus;8%); building class (superior Class B construction, &minus;5%); occupancy at sale (38%-leased investment sale vs. subject's owner-user profile, &minus;4%)</td><td>$175.36</td>
+            </tr>
+            <tr>
+              <td><strong>2212 Hope Mills Rd</strong></td><td>$162.44</td><td>+3%</td><td>Size (31% larger than subject's heated area, larger buildings sell at a lower $/SF, +6%); building class (Class B, &minus;3%); use (owner-user wellness/therapy, directly comparable, 0%)</td><td>$167.31</td>
+            </tr>
+            <tr>
+              <td><strong>3656 Cape Center Dr</strong></td><td>$180.81</td><td>+13%</td><td>Size (137% larger, +12%); configuration (2-story vs. subject's single-story, less efficient for medical/vet reuse, +4%); building class (Class B, &minus;5%); location (comparable medical corridor, +2%)</td><td>$204.32</td>
+            </tr>
+            <tr>
+              <td>1291 Oliver St</td><td>$150.13</td><td>&minus;7%</td><td>Location (secondary/downtown-adjacent corridor, +3%); size (40% smaller, &minus;10%); construction (wood frame, inferior to subject, +5%); occupancy at sale (100%-leased investment sale, &minus;5%)</td><td>$139.62</td>
+            </tr>
+            <tr>
+              <td>690 N Reilly Rd</td><td>$150.00</td><td>&minus;5%</td><td>Size (11% smaller, &minus;5%); configuration (2-story multi-tenant, +4%); occupancy at sale (multi-tenant investment, &minus;4%); location (comparable corridor, 0%)</td><td>$142.50</td>
+            </tr>
+            <tr>
+              <td>4140 Ramsey St</td><td>$167.54</td><td>&minus;13%</td><td>Size (63% smaller, &minus;12%); ownership structure (condo unit vs. subject's standalone whole building, +3%); occupancy at sale (100%-leased investment, &minus;4%)</td><td>$145.76</td>
+            </tr>
+            <tr>
+              <td>1778 Metromedical Dr</td><td>$162.50</td><td>&minus;15%</td><td>Size (65% smaller, &minus;12%); building class (Class B, &minus;3%); occupancy at sale (vacant, comparable to subject's anticipated vacant sale, 0%)</td><td>$138.13</td>
+            </tr>
+            <tr>
+              <td>215-223 Williams St</td><td>$138.93</td><td>+11%</td><td>Location (downtown submarket, weaker than Bragg Blvd corridor, +5%); size (78% larger, +9%); occupancy at sale (multi-tenant, tenant-purchase motivation, &minus;3%)</td><td>$154.21</td>
+            </tr>
+          </table>
+          <p class="note">Adjusted-value reconciliation: the four <span class="pill">Primary</span> comps average $183.42/SF adjusted (vs. $188.12/SF unadjusted), indicating roughly $1,036,000 on the subject's 5,647 SF heated area; all nine comps average $161.54/SF adjusted (vs. $169.06/SF unadjusted), indicating roughly $912,000; the adjusted median ($154.21/SF) indicates roughly $871,000. These adjusted figures bracket the same $850,000&ndash;$1,075,000 indicated value range and $975,000 recommended list price shown in the Opinion of Value below.</p>
+          <p class="note">Adjustments are Grant-Murray Real Estate's professional judgment based on the comp attributes shown in the comparable sales table above (size, sale date, building class/story, and occupancy status at sale). This grid formalizes, and is not intended to replace, the broker's opinion of value; it is not a certified appraisal adjustment analysis under USPAP.</p>
+        </div>
+
         <div class="card" style="margin-top:var(--space-6)">
           <h3 style="margin-bottom:var(--space-4)">Opinion of value</h3>
           <p>All $/SF figures below are calculated against the subject's <strong>5,647 SF heated area</strong> only, per broker instruction &mdash; not the 7,265 SF gross total that includes the unheated kennel and covered storage space.</p>
