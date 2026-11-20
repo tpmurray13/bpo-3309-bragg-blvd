@@ -83,14 +83,14 @@
       tr{page-break-inside:avoid}
       .comps-table{table-layout:fixed;width:100%}
       .comps-table th,.comps-table td{white-space:normal;word-wrap:break-word;overflow-wrap:break-word;font-size:7.3pt;line-height:1.35;padding:.3rem .2rem}
-      .comps-table th:nth-child(1),.comps-table td:nth-child(1){width:13%}
-      .comps-table th:nth-child(2),.comps-table td:nth-child(2){width:7.5%}
-      .comps-table th:nth-child(3),.comps-table td:nth-child(3){width:10%}
-      .comps-table th:nth-child(4),.comps-table td:nth-child(4){width:7%}
-      .comps-table th:nth-child(5),.comps-table td:nth-child(5){width:6.5%}
-      .comps-table th:nth-child(6),.comps-table td:nth-child(6){width:9%}
-      .comps-table th:nth-child(7),.comps-table td:nth-child(7){width:15%}
-      .comps-table th:nth-child(8),.comps-table td:nth-child(8){width:32%}
+      .comps-table th:nth-child(1),.comps-table td:nth-child(1){width:16%}
+      .comps-table th:nth-child(2),.comps-table td:nth-child(2){width:10%}
+      .comps-table th:nth-child(3),.comps-table td:nth-child(3){width:10.5%}
+      .comps-table th:nth-child(4),.comps-table td:nth-child(4){width:6.5%}
+      .comps-table th:nth-child(5),.comps-table td:nth-child(5){width:7.5%}
+      .comps-table th:nth-child(6),.comps-table td:nth-child(6){width:9.5%}
+      .comps-table th:nth-child(7),.comps-table td:nth-child(7){width:14%}
+      .comps-table th:nth-child(8),.comps-table td:nth-child(8){width:26%}
       .comps-table .pill,.comps-table .pill-outline{display:block;width:max-content;margin-bottom:2pt}
       .adj-table{table-layout:fixed;width:100%}
       .adj-table th,.adj-table td{white-space:normal;word-wrap:break-word;overflow-wrap:break-word;font-size:7.3pt;line-height:1.35;padding:.3rem .2rem}
@@ -105,6 +105,15 @@
       a{color:var(--color-primary) !important;text-decoration:none}
       @page{margin:0.55in}
     }
+    .fig{width:100%;height:auto;display:block;border-radius:var(--radius-lg);border:1px solid rgba(31,35,32,.1)}
+    .fig-cap{font-size:var(--text-xs);color:var(--color-text-muted);margin-top:.4rem}
+    .kpi-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--space-4)}
+    .callout{border-left:4px solid var(--color-band);background:var(--color-band-soft);padding:var(--space-4) var(--space-5);border-radius:var(--radius-md);font-size:var(--text-sm);margin-top:var(--space-5)}
+    .num{white-space:nowrap}
+    .table td.r,.table th.r{text-align:right}
+    ul.plain{padding-left:1.2rem;font-size:var(--text-sm)} ul.plain li{margin:.3rem 0}
+    @media (max-width: 820px){.kpi-grid{grid-template-columns:1fr 1fr}}
+    @media print{.two-col{grid-template-columns:1fr 1fr !important;gap:10pt !important}.grid{grid-template-columns:1fr !important;gap:8pt !important}.grid .fig{max-height:250pt;width:auto;margin:0 auto}section{padding:8pt 0 !important}.table th,.table td{padding:.3rem .35rem}.table{font-size:8.8pt}.terms-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:6pt !important}.card{break-inside:avoid}.card.split{break-inside:auto}h2{break-after:avoid}.hero-photo{max-height:210pt}.kpi-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:6pt}.fig{max-height:300pt;object-fit:contain}.figbox,.callout{page-break-inside:avoid}.pb{page-break-before:always}.adj-table th:nth-child(4),.adj-table td:nth-child(4){width:57%}}
   </style>
 </head>
 <body>
@@ -126,183 +135,285 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div>
-          <div class="eyebrow">Broker Price Opinion · For Sale &amp; For Lease · Fayetteville, NC</div>
-          <h1>3309 Bragg Blvd</h1>
-          <img class="hero-photo" src="assets/hero.jpg" alt="3309 Bragg Blvd, Fayetteville NC — former Cape Fear Animal Hospital building exterior" />
-          <p class="lede">Standalone single-story former veterinary/medical building on Bragg Blvd (former Cape Fear Animal Hospital), currently marketed for lease and now being added as a for-sale listing. The building totals 7,265 SF including approximately 1,600 SF of kennel and covered storage space; 5,647 SF is heated/finished office-medical space. Per Grant-Murray practice, this opinion's per-SF metrics are based on the 5,647 SF heated area, not the 7,265 SF gross total.</p>
-          <div class="stats">
-            <div class="stat"><div class="stat-label">Heated / finished area</div><div class="stat-value">5,647 SF</div></div>
-            <div class="stat"><div class="stat-label">Total area (incl. kennels)</div><div class="stat-value">7,265 SF</div></div>
-            <div class="stat"><div class="stat-label">Current lease rate</div><div class="stat-value">$19.50/SF NNN</div></div>
-            <div class="stat"><div class="stat-label">Sale opinion of value</div><div class="stat-value">$850K – $1.075M</div></div>
-          </div>
+        <div class="eyebrow">Broker Price Opinion · Sale Update · Fayetteville, NC · November 20, 2026</div>
+        <h1>3309 Bragg Blvd</h1>
+        <img class="hero-photo" src="assets/hero.jpg" alt="3309 Bragg Blvd, Fayetteville NC, former Cape Fear Animal Hospital building exterior" />
+        <p class="lede">Updated sale opinion for the former Cape Fear Animal Hospital, a freestanding 7,265 SF veterinary/medical building on 1.01 acres on the Bragg Blvd corridor. This update values the building on its full gross area, the same basis CoStar uses for every comparable sale, and adds a cost check, an income check, area crime data, current market conditions and a hold-versus-sell analysis for the owner.</p>
+        <div class="stats">
+          <div class="stat"><div class="stat-label">Broker price opinion</div><div class="stat-value">$1,100,000</div></div>
+          <div class="stat"><div class="stat-label">Value range</div><div class="stat-value">$1,000,000 – $1,200,000</div></div>
+          <div class="stat"><div class="stat-label">Recommended list price</div><div class="stat-value">$1,150,000</div></div>
+          <div class="stat"><div class="stat-label">BPO per SF (7,265 SF gross)</div><div class="stat-value">$151.41/SF</div></div>
         </div>
       </div>
     </section>
 
     <section class="alt">
       <div class="container">
-        <h2>Subject property summary</h2>
-        <div class="card table-wrap">
-          <table class="table">
-            <tr><th>Address</th><td>3309 Bragg Blvd, Fayetteville, NC 28303 (cross street: William Clark Rd)</td></tr>
-            <tr><th>Parcel / PIN</th><td>0418-92-3546 — Property description: "3309 Bragg Blvd Lt &amp; Hospital"</td></tr>
-            <tr><th>Owner / Client</th><td>3309 Bragg Blvd, LLC — Mary Pyche, 289 Garden St, Lake Helen, FL 32744</td></tr>
-            <tr><th>Year built / renovated</th><td>1949 / 1999 <span class="note" style="display:inline">(per LoopNet marketing listing)</span></td></tr>
-            <tr><th>Floors</th><td>1</td></tr>
-            <tr><th>Heated / finished area</th><td><strong>5,647 SF</strong> — used as the basis for all $/SF valuation metrics in this opinion</td></tr>
-            <tr><th>Total building area</th><td>7,265 SF gross, including ~1,600 SF of kennel and covered storage space (not heated)</td></tr>
-            <tr><th>Parking ratio</th><td>3.99 / 1,000 SF</td></tr>
-            <tr><th>Prior / current use</th><td>Former Cape Fear Animal Hospital (veterinary clinic) — reception with dual front-desk stations, 6–8 private offices, exam/treatment rooms, dedicated radiology suite, fully enclosed surgery room, A-Ward &amp; C-Ward, isolation room, kitchenette, restrooms, indoor kennel run, and fenced outdoor exercise/kennel area</td></tr>
-            <tr><th>Adaptability</th><td>Layout and infrastructure are well-suited to veterinary, dental, or general medical reuse; also convertible to general office/flex</td></tr>
-          </table>
+        <h2>Summary for the owner</h2>
+        <div class="card">
+          <ul class="plain">
+            <li><strong>$1.1M is supported by several independent methods.</strong> Adjusted closed sales, a depreciated replacement-cost check, a heated-plus-kennel component method and a recent vet hospital sale all point to roughly $1.06M–$1.19M.</li>
+            <li><strong>What changed from the July opinion.</strong> The July BPO applied comp prices only to the 5,647 SF heated area, which gave the 1,618 SF of kennel and storage space no value. The comps are measured on gross building area, so this update applies them to the subject's 7,265 SF gross area and deducts for the lower-quality kennel space.</li>
+            <li><strong>Sale beats holding vacant.</strong> The building has been listed for lease since 12/1/2025 at $19.50/SF NNN without a signed lease. Holding vacant costs an estimated $20K–$27K a year. Leasing first could lift value to $1.16M–$1.22M, but only after 9–12+ months, about $90K–$110K in tenant improvements and commissions, carrying costs and lease-up risk. That leaves little or no net gain.</li>
+            <li><strong>Area crime is down, not up.</strong> Reported incidents within half a mile fell about 43% from 2023 to 2026. The subject's area ranks mid-pack against the comp locations. There are some real recent concerns nearby, which are covered below.</li>
+            <li><strong>Counter-evidence buyers will raise.</strong> Older, general-purpose buildings on Bragg Blvd have recently sold for only $52–$67/SF. The 2026 county tax value is $944,345. Both are addressed in the reconciliation.</li>
+          </ul>
         </div>
-        <p class="note">Building data compiled from the Exclusive Right to Lease Listing Agreement (signed 12/1/2025), the Magicplan floor plan sketch, and the property's active LoopNet marketing listing.</p>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <h2>Current lease listing</h2>
-        <div class="card table-wrap">
-          <table class="table">
-            <tr><th>Listing type</th><td>Exclusive right to lease</td></tr>
-            <tr><th>Term</th><td>Through 11/30/2026; auto-renews for successive 12-month periods absent 60-day written notice</td></tr>
-            <tr><th>Asking rent</th><td>$19.50/SF/YR NNN (≈ $1.63/SF/mo, $141,668/yr, $11,806/mo on 7,265 SF gross)</td></tr>
-            <tr><th>Taxes / insurance / operating expenses / maintenance</th><td>NNN (tenant reimburses)</td></tr>
-            <tr><th>Utilities</th><td>Paid by tenant</td></tr>
-            <tr><th>Possession</th><td>At lease signing</td></tr>
-            <tr><th>Lease commission</th><td>6.0% of total rent (first 60 months) if a cooperating tenant broker is involved; 4.0% if Grant-Murray Real Estate procures the tenant with no cooperating broker — 50% payable at lease execution, 50% at rent commencement</td></tr>
-            <tr><th>Marketing expense to Client</th><td>None (N/A on the listing agreement)</td></tr>
-          </table>
+        <h2>Subject property</h2>
+        <div class="grid">
+          <div class="card table-wrap">
+            <table class="table">
+              <tr><th>Address</th><td>3309 Bragg Blvd, Fayetteville, NC 28303 (near William Clark Rd)</td></tr>
+              <tr><th>Parcel / PIN</th><td>0418-92-3546 · 1.01 acres · CC (Community Commercial) zoning · inside city limits</td></tr>
+              <tr><th>Owner</th><td>3309 Bragg Blvd, LLC</td></tr>
+              <tr><th>Building</th><td>7,265 SF gross: 5,647 SF heated plus about 1,618 SF of kennel and covered storage. Single story.</td></tr>
+              <tr><th>Year built / renovated</th><td>1949 / 1999</td></tr>
+              <tr><th>Layout</th><td>Reception, 6–8 offices, exam and treatment rooms, radiology suite, enclosed surgery, wards, isolation, kitchenette, restrooms, indoor runs and a fenced outdoor area</td></tr>
+              <tr><th>Traffic</th><td>About 31,000 vehicles per day on Bragg Blvd</td></tr>
+              <tr><th>2026 county value</th><td>$944,345 (land $195,326 · building $732,129 · misc. $16,890)</td></tr>
+              <tr><th>Last sale</th><td>7/26/2022, $1,627,000 (Book 11531, Page 533), bought while the vet practice was operating</td></tr>
+              <tr><th>Status</th><td>Vacant since the practice merged with Dogwood Animal Hospital in early 2026; listed for lease at $19.50/SF NNN</td></tr>
+            </table>
+          </div>
+          <div class="figbox">
+            <img class="fig" src="assets/aerial.jpg" alt="Aerial view of the 1.01-acre subject parcel outlined in yellow on Bragg Blvd" />
+            <p class="fig-cap">Subject parcel outlined in yellow. The deep lot includes a wooded rear section behind the building and parking.</p>
+          </div>
         </div>
-        <p class="note">Source: Exclusive Right to Lease Listing Agreement (NC Association of REALTORS® Standard Form 572), executed 12/1/2025 between Grant-Murray Real Estate, LLC and 3309 Bragg Blvd, LLC.</p>
+        <p class="note">Sources: Cumberland County tax record and GIS; Grant-Murray lease brochure; Exclusive Right to Lease Listing Agreement dated 12/1/2025. Traffic count is from the lease brochure. Esri World Imagery aerial.</p>
       </div>
     </section>
 
     <section class="alt">
+      <div class="container">
+        <h2>Comparable sales</h2>
+        <div class="card table-wrap split">
+          <p style="margin-top:0">Nine closed Fayetteville office and medical sales are shown below: eight from 6/2025 to 4/2026 and one from 9/2024. CoStar reports each comp's price per SF on gross rentable building area, so this update applies those figures to the subject's 7,265 SF gross area. At $1.1M, the subject would trade at $151.41/SF, which is below every primary comp's unadjusted price.</p>
+          <table class="table comps-table">
+            <tr><th>Address</th><th>Sold</th><th>Price</th><th>SF</th><th>$/SF</th><th>Built / reno.</th><th>Sale type</th><th>Comparability</th></tr>
+            <tr><td><strong>1. 609 Executive Plz</strong></td><td>8/25/2025</td><td>$1,000,000</td><td>4,847</td><td>$206.31</td><td>1992</td><td>Medical office, 38% leased</td><td><span class="pill">Primary</span> Similar size medical office; small 0.26 ac site</td></tr>
+            <tr><td><strong>2. 6201 Raeford Rd</strong></td><td>7/25/2025</td><td>$1,050,000</td><td>5,175</td><td>$202.90</td><td>1987 / 2004</td><td>Owner-user, vacant</td><td><span class="pill">Primary</span> Vacant owner-user purchase on a 0.99 ac site</td></tr>
+            <tr><td><strong>3. 3656 Cape Center Dr</strong></td><td>11/18/2025</td><td>$2,425,000</td><td>13,412</td><td>$180.81</td><td>1997 / 2018</td><td>Owner-user, medical</td><td><span class="pill">Primary</span> Medical owner-user; larger and two-story</td></tr>
+            <tr><td><strong>6. 2212 Hope Mills Rd</strong></td><td>2/10/2026</td><td>$1,199,000</td><td>7,381</td><td>$162.44</td><td>1964 / 2022</td><td>Owner-user, wellness</td><td><span class="pill">Primary</span> Nearly identical size; older building, renovated</td></tr>
+            <tr><td>4. 4140 Ramsey St</td><td>3/31/2026</td><td>$350,000</td><td>2,089</td><td>$167.54</td><td>2008</td><td>Office condo</td><td><span class="pill-outline">Secondary</span> Small condo unit</td></tr>
+            <tr><td>5. 1778 Metromedical Dr</td><td>6/16/2025</td><td>$325,000</td><td>2,000</td><td>$162.50</td><td>n/a</td><td>Vacant medical</td><td><span class="pill-outline">Secondary</span> Small medical office</td></tr>
+            <tr><td>7. 1291 Oliver St</td><td>9/17/2024</td><td>$508,500</td><td>3,387</td><td>$150.13</td><td>1982</td><td>Leased medical</td><td><span class="pill-outline">Secondary</span> Older sale; wood frame</td></tr>
+            <tr><td>8. 690 N Reilly Rd</td><td>5/1/2025</td><td>$750,000</td><td>5,000</td><td>$150.00</td><td>1978</td><td>Multi-tenant office</td><td><span class="pill-outline">Secondary</span> Two-story multi-tenant</td></tr>
+            <tr><td>9. 215-223 Williams St</td><td>4/29/2026</td><td>$1,400,000</td><td>10,077</td><td>$138.93</td><td>n/a</td><td>Tenant purchase</td><td><span class="pill-outline">Secondary</span> Downtown multi-tenant</td></tr>
+          </table>
+        </div>
+        <div class="two-col" style="margin-top:var(--space-6)">
+          <div class="figbox"><img class="fig" src="assets/compmap.jpg" alt="Map of subject (S), comparable sales 1 through 9, and the Riverbark vet hospital sale (V)" /><p class="fig-cap">S = subject. Numbers match the comp table. V = Riverbark Veterinary Hospital sale (1311 N Bragg Blvd, Spring Lake). Comp 7 is not mapped.</p></div>
+          <div class="figbox"><img class="fig" src="assets/comps.png" alt="Bar chart of unadjusted and adjusted price per SF for nine comps versus the $151.41/SF target" /><p class="fig-cap">Six of nine comps are at or near the $1.1M line after adjustment, and the four primary comps are all at or above it.</p></div>
+        </div>
+        <p class="note">Sources: CoStar Sale Comps report pulled 7/27/2026, licensed to Grant-Murray Real Estate; Cumberland County GIS deed records. Basemap: Esri World Street Map.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Adjustment matrix</h2>
+        <div class="card table-wrap split">
+          <p style="margin-top:0">Each comp's gross $/SF is adjusted for its differences from the subject. Adjustments cover age and condition (1949 shell, 1999 renovation), the lower-value kennel and storage share (22% of gross area, −5% applied to every comp), site size and parking (1.01 acres), building size, location and demand on the corridor, and specialized medical build-out. Location adjustments reflect each corridor's demand for medical and office users, not crime alone. The subject's crime levels fall in the middle of the comp locations, as shown in the crime section.</p>
+          <table class="table adj-table">
+            <tr><th>Comp property</th><th>Unadj. $/SF</th><th>Net Adj. %</th><th>What was adjusted</th><th>Adj. $/SF</th></tr>
+            <tr><td><strong>609 Executive Plz</strong></td><td>$206.31</td><td>−17%</td><td>Newer 1992 building (−8%); smaller (−4%); much smaller 0.26 ac site (+5%); stronger medical-office location (−5%); subject's kennel share (−5%)</td><td>$171.24</td></tr>
+            <tr><td><strong>6201 Raeford Rd</strong></td><td>$202.90</td><td>−20%</td><td>Stronger Raeford Rd corridor (−8%); newer 1987/2004 building (−5%); slightly smaller (−2%); subject's kennel share (−5%); similar site (0%)</td><td>$162.32</td></tr>
+            <tr><td><strong>3656 Cape Center Dr</strong></td><td>$180.81</td><td>−6%</td><td>Much larger (+8%); two-story (+3%); 2018 renovation (−8%); hospital-district location (−7%); lower land-to-building ratio (+3%); subject's kennel share (−5%)</td><td>$169.96</td></tr>
+            <tr><td><strong>2212 Hope Mills Rd</strong></td><td>$162.44</td><td>−8%</td><td>2022 renovation (−8%); subject's kennel share (−5%); subject's surgery, radiology and ward build-out (+5%); similar size (0%)</td><td>$149.44</td></tr>
+            <tr><td>4140 Ramsey St</td><td>$167.54</td><td>−17%</td><td>Small condo unit (−12%); newer 2008 building (−8%); subject's freestanding 1.01 ac site (+8%); subject's kennel share (−5%)</td><td>$139.06</td></tr>
+            <tr><td>1778 Metromedical Dr</td><td>$162.50</td><td>−14%</td><td>Small unit (−12%); hospital-district location (−5%); subject's freestanding site (+8%); subject's kennel share (−5%)</td><td>$139.75</td></tr>
+            <tr><td>1291 Oliver St</td><td>$150.13</td><td>−5%</td><td>Smaller (−8%); older 2024 sale date (+3%); inferior wood-frame construction (+5%); subject's kennel share (−5%)</td><td>$142.62</td></tr>
+            <tr><td>690 N Reilly Rd</td><td>$150.00</td><td>0%</td><td>Two-story multi-tenant (+4%); older effective age (+3%); slightly smaller (−2%); subject's kennel share (−5%)</td><td>$150.00</td></tr>
+            <tr><td>215-223 Williams St</td><td>$138.93</td><td>+3%</td><td>Larger (+6%); downtown tenant purchase (−3%); subject's medical build-out (+5%); subject's kennel share (−5%)</td><td>$143.10</td></tr>
+          </table>
+          <p class="note">Results: the four primary comps average <strong>$163.24/SF adjusted</strong>, or about <strong>$1,186,000</strong> on 7,265 SF. All nine comps average <strong>$151.94/SF adjusted</strong>, or about <strong>$1,104,000</strong>, and the adjusted median of $149.44/SF indicates about $1,086,000. The adjustments combine to a net downward move for most comps, which reflects the subject's age and kennel area. These adjustments are Grant-Murray Real Estate's professional judgment as a broker. They are not a USPAP appraisal adjustment analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Supporting value checks</h2>
+        <div class="two-col">
+          <div class="card table-wrap">
+            <h3>Component method</h3>
+            <table class="table">
+              <tr><td>Heated medical area: 5,647 SF × $178</td><td class="r num">$1,005,166</td></tr>
+              <tr><td>Kennel / storage: 1,618 SF × $60</td><td class="r num">$97,080</td></tr>
+              <tr><th>Indicated value</th><th class="r num">$1,102,246</th></tr>
+            </table>
+            <p class="note">$178/SF is just below the July BPO's $183.42/SF adjusted primary average on heated area. The kennel and storage space is valued at about one-third of that rate.</p>
+          </div>
+          <div class="card table-wrap">
+            <h3>Cost approach (depreciated)</h3>
+            <table class="table">
+              <tr><td>Replacement cost, heated 5,647 SF × $275</td><td class="r num">$1,552,925</td></tr>
+              <tr><td>Kennel / storage 1,618 SF × $150</td><td class="r num">$242,700</td></tr>
+              <tr><td>Site improvements (paving, fencing)</td><td class="r num">$100,000</td></tr>
+              <tr><td>Less depreciation, 48–52% (age and function)</td><td class="r num">−$910K to −$986K</td></tr>
+              <tr><td>Plus land (county value)</td><td class="r num">$195,326</td></tr>
+              <tr><th>Indicated value</th><th class="r num">$1,105,000 – $1,181,000</th></tr>
+            </table>
+            <p class="note">A new freestanding vet hospital costs about $225–$350/SF to build before land and equipment. A buyer who needs surgery, radiology and kennels saves far more than $1.1M compared with building new.</p>
+          </div>
+          <div class="card table-wrap">
+            <h3>Income approach</h3>
+            <table class="table">
+              <tr><td>Market rent: 7,265 SF × $16.50 NNN</td><td class="r num">$119,873</td></tr>
+              <tr><td>Less vacancy and credit loss (7%)</td><td class="r num">−$8,391</td></tr>
+              <tr><td>Less reserves and non-reimbursed costs (4%)</td><td class="r num">−$4,459</td></tr>
+              <tr><th>Stabilized NOI</th><th class="r num">$107,022</th></tr>
+              <tr><td>Value at 8.75%–9.25% cap rate</td><td class="r num">$1,157,000 – $1,223,000</td></tr>
+              <tr><td>Less lease-up costs (downtime, TI, commission, carry)</td><td class="r num">about −$194,000</td></tr>
+              <tr><th>As-is value</th><th class="r num">$963,000 – $1,029,000</th></tr>
+            </table>
+            <p class="note">Rent is set below the $19.50 asking rate because the space has not leased at that price in about 12 months. Local office cap rates run 8.0–10.5%.</p>
+          </div>
+          <div class="card table-wrap">
+            <h3>Vet-specific and record checks</h3>
+            <table class="table">
+              <tr><td>Riverbark Veterinary Hospital, 1311 N Bragg Blvd, Spring Lake: 22,471 SF sold 8/3/2026 for $3,286,000 ($146.24/SF) × 7,265 SF</td><td class="r num">$1,062,000</td></tr>
+              <tr><td>Subject's own 2022 sale with the vet practice operating ($223.95/SF)</td><td class="r num">$1,627,000</td></tr>
+              <tr><td>2026 county tax value</td><td class="r num">$944,345</td></tr>
+            </table>
+            <p class="note">The 2022 price reflected an operating practice. A vacant building should sell below it. The county value is mass-appraised and is not a market sale.</p>
+          </div>
+        </div>
+        <p class="note">Sources: veterinary construction ranges from <a href="https://terrapincg.com/news/average-cost-to-build-veterinary-clinic-usa">Terrapin Construction Group (2026)</a>; cap rates from <a href="https://www.johnsalony.com/commercial-real-estate/fayetteville-nc">John Salony, Fayetteville CRE</a>; Riverbark sale and the subject's 2022 sale from Cumberland County deed records, with occupant confirmed by <a href="https://www.riverbarkvetspringlake.com/contact/">Riverbark Veterinary Hospital</a>. Depreciation, rent, lease-up costs and component rates are broker estimates.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Reconciliation</h2>
+        <div class="grid">
+          <div class="figbox"><img class="fig" src="assets/recon.png" alt="Chart of value indicators compared with the $1.0M to $1.2M range and the $1.1M BPO" /></div>
+          <div class="card">
+            <p style="margin-top:0">The most weight goes to the adjusted sales comparison ($1.09M–$1.19M), the component method ($1.10M) and the cost check ($1.11M–$1.18M). These methods reflect how an owner-user buyer, such as a veterinarian, dentist or medical practice, would price this building. The as-is income approach and the Riverbark sale support the lower half of the range.</p>
+            <p style="margin-top:.75rem"><strong>Counter-evidence, disclosed:</strong> Three older, general-purpose buildings on the corridor sold for $52–$67/SF: 3116 Bragg (former restaurant, $300K, 4/2026), 4441 Bragg (office, $525K, 2/2025) and 5216 Bragg (office, $450K, 9/2025). Those buildings do not have medical build-out and some had deferred maintenance, so they are not given weight. Still, they show what a non-medical buyer may offer, which is why a medical or veterinary user is the target buyer.</p>
+            <p style="margin-top:.75rem">Broker price opinion: <strong>$1,100,000</strong>. Range: $1,000,000 – $1,200,000.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="alt pb">
+      <div class="container">
+        <h2>Area crime</h2>
+        <div class="kpi-grid">
+          <div class="stat"><div class="stat-label">Incidents within 0.5 mi, 2023</div><div class="stat-value">435</div></div>
+          <div class="stat"><div class="stat-label">2026 (annualized)</div><div class="stat-value">≈250 (−43%)</div></div>
+          <div class="stat"><div class="stat-label">Incidents within 0.25 mi, 2023 → 2025</div><div class="stat-value">182 → 98</div></div>
+          <div class="stat"><div class="stat-label">Incidents at 3309 itself, 2019–2026</div><div class="stat-value">0</div></div>
+        </div>
+        <div class="two-col" style="margin-top:var(--space-6)">
+          <div class="figbox"><img class="fig" src="assets/crime_trend.png" alt="Stacked bar chart of incidents within half a mile by year, 2023 to 2026" /></div>
+          <div class="figbox"><img class="fig" src="assets/crime_comps.png" alt="Bar chart comparing incidents within half a mile of the subject and comp locations" /></div>
+        </div>
+        <div class="card" style="margin-top:var(--space-6)">
+          <h3>What the data shows</h3>
+          <ul class="plain">
+            <li><strong>The trend is improving.</strong> Reported incidents within half a mile fell from 435 in 2023 to 267 in 2025, and 2026 is on pace for about 250. The area's share of citywide crime dropped from 2.48% to about 1.74%.</li>
+            <li><strong>It is still a busy commercial corridor.</strong> Incident density within half a mile is about 3.5 times the citywide average per square mile, which is typical along a major retail strip.</li>
+            <li><strong>Most incidents are retail property crime.</strong> Since 1/2025, the most common incidents within a quarter mile were shoplifting (32), vandalism (21), other larceny (20) and simple assault (12). The convenience store at 3308 Bragg, across the street, accounts for 43 of the 169 incidents.</li>
+            <li><strong>There are real recent concerns.</strong> Shootings into an occupied home or vehicle were reported on Chandler St behind the corridor on 5/29, 6/17 and 8/27/2026. Four business break-ins happened at 3430–3450 Bragg in 9/2025, and there have been several robberies nearby. Buyers will ask about these.</li>
+            <li><strong>Compared with the comp locations.</strong> The subject's area (488 incidents since 1/2025) is mid-range. Three comps near the hospital district and downtown had more incidents (542–634) and still sold for $139–$181/SF.</li>
+            <li><strong>Citywide context.</strong> Fayetteville's 2025 violent crime rate was 613.9 per 100,000 residents, compared with 330.6 statewide. In the first half of 2026, homicides were down 46% but crimes against persons were up 12.5%.</li>
+          </ul>
+          <div class="callout">Recommendation: a vacant building on a busy corridor invites vandalism and trespass, so selling sooner limits that exposure. Until a sale closes, keep the building secured with lighting, cameras and regular checks, and let the insurer know it is vacant.</div>
+        </div>
+        <p class="note">Sources: Fayetteville Police Department open data (crimes against persons, property and society), queried by distance from the parcel center for 1/1/2023 to 11/19/2026; <a href="https://www.fayettevillenc.net/guides/is-fayetteville-nc-safe/">FayettevilleNC.net summary of FBI Crime Data Explorer</a>; <a href="https://www.cityviewnc.com/stories/homicides-drop-in-fayetteville-while-overall-crime-sees-small-increase">CityView, first-half 2026 police data</a>. Police data shows reported incidents only and is geocoded to block or address. Comp 7 (Oliver St) was not compared.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Market conditions</h2>
+        <div class="kpi-grid">
+          <div class="stat"><div class="stat-label">Submarket vacancy (CoStar)</div><div class="stat-value">1.4% – 4.2%</div></div>
+          <div class="stat"><div class="stat-label">Fayetteville median asking</div><div class="stat-value">$140/SF · $17.30 rent</div></div>
+          <div class="stat"><div class="stat-label">Medical office asking, Jul–Oct 2026</div><div class="stat-value">$177 – $202/SF</div></div>
+          <div class="stat"><div class="stat-label">Combined 2026 tax rate</div><div class="stat-value">$0.9485 per $100</div></div>
+        </div>
+        <div class="card" style="margin-top:var(--space-6)">
+          <ul class="plain">
+            <li><strong>Tight occupancy.</strong> CoStar submarket vacancy for 1–3 Star office runs 1.4%–4.2%, and the overall Fayetteville market is about 3%. Typical marketing time is 10.6–14.5 months, and submarket asking rents are about $19.78–$26.19/SF.</li>
+            <li><strong>Asking prices.</strong> Fayetteville's median commercial asking price is $140/SF, with a median asking rent of $17.30/SF. Medical office asking prices averaged $177–$202/SF from July to October 2026. Office asking rents average about $16.73/SF.</li>
+            <li><strong>Investment is coming back to the corridor.</strong> At 2603 Bragg Blvd, 0.7 mile away, land that sold for $1.95M in 5/2024 was redeveloped as a 7-Eleven and sold for $9.623M in 6/2026. Corridor sales since 2024 also include the 2848 Bragg hotel ($1.7M) and the 4400–4428 Bragg assemblage.</li>
+            <li><strong>Veterinary consolidation helps and hurts.</strong> Practices are merging, which is how the subject became vacant. National buyers are also acquiring vet real estate, as with the Riverbark sale in Spring Lake. Independent vets, specialty clinics and other medical users remain the most likely buyers.</li>
+            <li><strong>Holding costs.</strong> The 2026 city and county rate is $0.9485 per $100, so taxes on the $944,345 assessment are about <strong>$8,957 a year</strong>.</li>
+          </ul>
+        </div>
+        <p class="note">Sources: CoStar market conditions at sale (report pulled 7/27/2026); <a href="https://realmo.com/market-analysis/nc/">Realmo NC market analysis, Nov 2026</a>; <a href="https://realmo.com/listing/2153-valleygate-dr-unit-101-fayetteville-nc-28304/15818603">Realmo medical office price trend</a>; <a href="https://realmo.com/listing/2547-ravenhill-dr-fayetteville-nc-28303/21054448">Realmo office lease benchmarks</a>; <a href="https://www.compass.com/homedetails/2603-Bragg-Blvd-Fayetteville-NC-28303/YBH6T_pid/">Compass, 2603 Bragg Blvd sale history</a>; <a href="https://www.cumberlandcountync.gov/departments/tax-group/tax/tax-rates">Cumberland County tax rates</a>; Cumberland County deed records.</p>
+      </div>
+    </section>
+
+    <section class="alt">
+      <div class="container">
+        <h2>Hold vs. sell</h2>
+        <div class="card table-wrap">
+          <table class="table">
+            <tr><th>Option</th><th>Timing</th><th>Estimated outcome</th><th>Risks</th></tr>
+            <tr><td><strong>Sell now (recommended)</strong></td><td>4–8 months to close</td><td>About $1.1M sale; about $1.03M–$1.05M net after commission and closing costs</td><td>Owner-user buyers need SBA or bank financing. Special-purpose properties typically require 15% down under SBA 504.</td></tr>
+            <tr><td>Lease first, then sell</td><td>12–24 months</td><td>$1.16M–$1.22M stabilized value, minus about $90K–$110K for TI and commission, minus $20K–$27K a year in carrying costs</td><td>The space has gone about 12 months without a lease at $19.50, and tenant credit is uncertain. The net gain over selling now is small.</td></tr>
+            <tr><td>Hold vacant</td><td>Open-ended</td><td>Costs about $20K–$27K a year in taxes (about $8,957), vacant-building insurance, utilities, lawn care and security</td><td>The 1949 building keeps aging, vandalism exposure grows, and buyers discount longer vacancies.</td></tr>
+          </table>
+          <p class="note">Insurance, utilities, TI and timing are broker estimates and should be confirmed with the owner's insurer and contractors.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <div class="container">
         <h2>Proposed sale listing terms</h2>
         <div class="card">
           <div class="terms-grid">
             <div class="stat"><div class="stat-label">Listing type</div><div class="stat-value">Exclusive right to sell</div></div>
-            <div class="stat"><div class="stat-label">Term</div><div class="stat-value">1 year</div></div>
-            <div class="stat"><div class="stat-label">List price</div><div class="stat-value">$975,000</div></div>
-            <div class="stat"><div class="stat-label">Commission — co-brokered</div><div class="stat-value">6%</div></div>
-            <div class="stat"><div class="stat-label">Commission — no other broker</div><div class="stat-value">4%</div></div>
-            <div class="stat"><div class="stat-label">Marketing expense to Client</div><div class="stat-value">$0 — GMRE pays own costs</div></div>
+            <div class="stat"><div class="stat-label">Recommended list price</div><div class="stat-value">$1,150,000</div></div>
+            <div class="stat"><div class="stat-label">Term</div><div class="stat-value">Through 7/28/2027</div></div>
+            <div class="stat"><div class="stat-label">Commission, co-brokered</div><div class="stat-value">6%</div></div>
+            <div class="stat"><div class="stat-label">Commission, no other broker</div><div class="stat-value">4%</div></div>
+            <div class="stat"><div class="stat-label">Marketing expense to owner</div><div class="stat-value">$0</div></div>
           </div>
-          <p class="note" style="margin-top:1.5rem">Grant-Murray Real Estate, LLC proposes a new 1-year exclusive right-to-sell listing on 3309 Bragg Blvd, to run concurrently with the existing lease listing. Commission is 6% of the gross sale price where a cooperating buyer's broker is involved, and 4% where Grant-Murray Real Estate procures the buyer directly with no cooperating broker. Grant-Murray Real Estate, LLC will pay all of its own marketing costs for this listing — the Client will not be billed separately for marketing expenses.</p>
-        </div>
-        <p class="note">Source: draft Exclusive Right to Sell Listing Agreement (not yet executed) between Grant-Murray Real Estate, LLC and 3309 Bragg Blvd, LLC. <a href="https://www.dropbox.com/scl/fi/2sl5n8f0h10aecpyelmyf/3309-Bragg-Blvd-1.pdf?rlkey=dfklmrgln1y0bd3meq0qdz2ax&amp;dl=0" target="_blank" rel="noopener">View the draft sale listing agreement (PDF)</a>.</p>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <h2>Valuation &amp; comparable sales</h2>
-        <div class="card table-wrap">
-          <p style="margin-top:0">Nine closed office sales in Fayetteville / Cumberland County (CoStar sale comps, pulled 7/27/2026) were reviewed, ranging from 2,000 SF to 13,412 SF and selling between 6/2025 and 4/2026 at $138.93/SF to $206.31/SF. The four comps below marked <strong>Primary</strong> are the closest matches to the subject's profile as a standalone, single-story, owner-user-type medical/veterinary building in the 4,800&ndash;13,400 SF range; the remaining five are smaller condo/investment/multi-tenant properties included as supporting market context.</p>
-          <table class="table comps-table">
-            <tr>
-              <th>Address</th><th>Sold</th><th>Price</th><th>RBA</th><th>$/SF</th><th>Class / Story</th><th>Sale type</th><th>Comparability</th>
-            </tr>
-            <tr>
-              <td><strong>6201 Raeford Rd</strong>, Fayetteville</td><td>7/25/2025</td><td>$1,050,000</td><td>5,175 SF</td><td>$202.90</td><td>C / 1-story</td><td>Owner-user (vacant at sale)</td><td><span class="pill">Primary</span> Closest size match to subject's heated area; standalone building</td>
-            </tr>
-            <tr>
-              <td><strong>609 Executive Plz</strong>, Fayetteville</td><td>8/25/2025</td><td>$1,000,000</td><td>4,847 SF</td><td>$206.31</td><td>B / 1-story</td><td>Investment (38% leased, medical tenant)</td><td><span class="pill">Primary</span> Similar size; partly-vacant medical office</td>
-            </tr>
-            <tr>
-              <td><strong>2212 Hope Mills Rd</strong>, Fayetteville</td><td>2/10/2026</td><td>$1,199,000</td><td>7,381 SF</td><td>$162.44</td><td>B / 1-story</td><td>Owner-user (wellness/therapy use)</td><td><span class="pill">Primary</span> Closest size match to subject's total 7,265 SF; single-story owner-user</td>
-            </tr>
-            <tr>
-              <td><strong>3656 Cape Center Dr</strong>, Fayetteville</td><td>11/18/2025</td><td>$2,425,000</td><td>13,412 SF</td><td>$180.81</td><td>B / 2-story</td><td>Owner-user (medical practice)</td><td><span class="pill">Primary</span> Owner-user medical use; larger footprint, 2-story</td>
-            </tr>
-            <tr>
-              <td>1291 Oliver St, Fayetteville</td><td>9/17/2024</td><td>$508,500</td><td>3,387 SF</td><td>$150.13</td><td>C / wood frame</td><td>Investment (100% leased, pediatric tenant)</td><td><span class="pill-outline">Secondary</span> Medical use but smaller, leased investment sale</td>
-            </tr>
-            <tr>
-              <td>690 N Reilly Rd, Fayetteville</td><td>5/1/2025</td><td>$750,000</td><td>5,000 SF</td><td>$150.00</td><td>B / 2-story</td><td>Investment (multi-tenant)</td><td><span class="pill-outline">Secondary</span> Similar size but multi-tenant, 2-story office</td>
-            </tr>
-            <tr>
-              <td>4140 Ramsey St, Fayetteville</td><td>3/31/2026</td><td>$350,000</td><td>2,089 SF</td><td>$167.54</td><td>C / 1-story</td><td>Office condo (100% leased)</td><td><span class="pill-outline">Secondary</span> Small condo unit &mdash; size mismatch</td>
-            </tr>
-            <tr>
-              <td>1778 Metromedical Dr, Fayetteville</td><td>6/16/2025</td><td>$325,000</td><td>2,000 SF</td><td>$162.50</td><td>B / 1-story</td><td>Vacant at sale</td><td><span class="pill-outline">Secondary</span> Small medical office &mdash; size mismatch</td>
-            </tr>
-            <tr>
-              <td>215-223 Williams St, Fayetteville</td><td>4/29/2026</td><td>$1,400,000</td><td>10,077 SF</td><td>$138.93</td><td>C / 1-story</td><td>Investment (multi-tenant, purchase by tenant)</td><td><span class="pill-outline">Secondary</span> Downtown multi-tenant; different submarket &amp; tenancy</td>
-            </tr>
-          </table>
-        </div>
-        <div class="card table-wrap" style="margin-top:var(--space-6)">
-          <h3 style="margin-bottom:var(--space-4)">Comparable sales adjustment matrix</h3>
-          <p style="margin-top:0">The unadjusted comps above are also formalized here into a sales-comparison adjustment grid, expressing each comp's variance from the subject (5,647 SF heated, 1949-built/1999-renovated, single-story, specialized veterinary buildout, Bragg Blvd corridor) as a net percentage adjustment. Positive adjustments mean the comp's raw $/SF understates its value relative to the subject (adjusted upward); negative adjustments mean the comp's raw $/SF overstates its value relative to the subject (adjusted downward). This formalizes &mdash; and is consistent with &mdash; the qualitative weighting already applied in the Opinion of Value below.</p>
-          <table class="table adj-table">
-            <tr>
-              <th>Comp property</th><th>Unadj. $/SF</th><th>Adj. %</th><th>What was adjusted</th><th>Adj. $/SF</th>
-            </tr>
-            <tr>
-              <td><strong>6201 Raeford Rd</strong></td><td>$202.90</td><td>&minus;8%</td><td>Size (8% smaller than subject, smaller buildings command a $/SF premium, &minus;5%); functional utility (generic space lacks subject's specialized medical/vet buildout, &minus;3%)</td><td>$186.67</td>
-            </tr>
-            <tr>
-              <td><strong>609 Executive Plz</strong></td><td>$206.31</td><td>&minus;15%</td><td>Location (secondary office park vs. Bragg Blvd corridor, +2%); size (14% smaller, &minus;8%); building class (superior Class B construction, &minus;5%); occupancy at sale (38%-leased investment sale vs. subject's owner-user profile, &minus;4%)</td><td>$175.36</td>
-            </tr>
-            <tr>
-              <td><strong>2212 Hope Mills Rd</strong></td><td>$162.44</td><td>+3%</td><td>Size (31% larger than subject's heated area, larger buildings sell at a lower $/SF, +6%); building class (Class B, &minus;3%); use (owner-user wellness/therapy, directly comparable, 0%)</td><td>$167.31</td>
-            </tr>
-            <tr>
-              <td><strong>3656 Cape Center Dr</strong></td><td>$180.81</td><td>+13%</td><td>Size (137% larger, +12%); configuration (2-story vs. subject's single-story, less efficient for medical/vet reuse, +4%); building class (Class B, &minus;5%); location (comparable medical corridor, +2%)</td><td>$204.32</td>
-            </tr>
-            <tr>
-              <td>1291 Oliver St</td><td>$150.13</td><td>&minus;7%</td><td>Location (secondary/downtown-adjacent corridor, +3%); size (40% smaller, &minus;10%); construction (wood frame, inferior to subject, +5%); occupancy at sale (100%-leased investment sale, &minus;5%)</td><td>$139.62</td>
-            </tr>
-            <tr>
-              <td>690 N Reilly Rd</td><td>$150.00</td><td>&minus;5%</td><td>Size (11% smaller, &minus;5%); configuration (2-story multi-tenant, +4%); occupancy at sale (multi-tenant investment, &minus;4%); location (comparable corridor, 0%)</td><td>$142.50</td>
-            </tr>
-            <tr>
-              <td>4140 Ramsey St</td><td>$167.54</td><td>&minus;13%</td><td>Size (63% smaller, &minus;12%); ownership structure (condo unit vs. subject's standalone whole building, +3%); occupancy at sale (100%-leased investment, &minus;4%)</td><td>$145.76</td>
-            </tr>
-            <tr>
-              <td>1778 Metromedical Dr</td><td>$162.50</td><td>&minus;15%</td><td>Size (65% smaller, &minus;12%); building class (Class B, &minus;3%); occupancy at sale (vacant, comparable to subject's anticipated vacant sale, 0%)</td><td>$138.13</td>
-            </tr>
-            <tr>
-              <td>215-223 Williams St</td><td>$138.93</td><td>+11%</td><td>Location (downtown submarket, weaker than Bragg Blvd corridor, +5%); size (78% larger, +9%); occupancy at sale (multi-tenant, tenant-purchase motivation, &minus;3%)</td><td>$154.21</td>
-            </tr>
-          </table>
-          <p class="note">Adjusted-value reconciliation: the four <span class="pill">Primary</span> comps average $183.42/SF adjusted (vs. $188.12/SF unadjusted), indicating roughly $1,036,000 on the subject's 5,647 SF heated area; all nine comps average $161.54/SF adjusted (vs. $169.06/SF unadjusted), indicating roughly $912,000; the adjusted median ($154.21/SF) indicates roughly $871,000. These adjusted figures bracket the same $850,000&ndash;$1,075,000 indicated value range and $975,000 recommended list price shown in the Opinion of Value below.</p>
-          <p class="note">Adjustments are Grant-Murray Real Estate's professional judgment based on the comp attributes shown in the comparable sales table above (size, sale date, building class/story, and occupancy status at sale). This grid formalizes, and is not intended to replace, the broker's opinion of value; it is not a certified appraisal adjustment analysis under USPAP.</p>
-        </div>
-
-        <div class="card" style="margin-top:var(--space-6)">
-          <h3 style="margin-bottom:var(--space-4)">Opinion of value</h3>
-          <p>All $/SF figures below are calculated against the subject's <strong>5,647 SF heated area</strong> only, per broker instruction &mdash; not the 7,265 SF gross total that includes the unheated kennel and covered storage space.</p>
-          <div class="stats" style="margin-top:var(--space-4)">
-            <div class="stat"><div class="stat-label">Primary comps average</div><div class="stat-value">$188.12/SF</div></div>
-            <div class="stat"><div class="stat-label">All 9 comps average</div><div class="stat-value">$169.06/SF</div></div>
-            <div class="stat"><div class="stat-label">Indicated value range</div><div class="stat-value">$850,000&ndash;$1,075,000</div></div>
-            <div class="stat"><div class="stat-label">Recommended list price</div><div class="stat-value">$975,000 (~$172.66/SF)</div></div>
+          <div class="table-wrap" style="margin-top:var(--space-5)">
+            <table class="table">
+              <tr><th>Estimated proceeds</th><th class="r">At list $1,150,000</th><th class="r">At BPO $1,100,000</th></tr>
+              <tr><td>Commission at 6% (co-brokered)</td><td class="r">$69,000</td><td class="r">$66,000</td></tr>
+              <tr><td>Commission at 4% (no other broker)</td><td class="r">$46,000</td><td class="r">$44,000</td></tr>
+              <tr><td>NC excise tax ($2 per $1,000) plus legal fees (est.)</td><td class="r">$4,800</td><td class="r">$4,700</td></tr>
+              <tr><th>Net to owner, 6% / 4%</th><th class="r">$1,076,200 / $1,099,200</th><th class="r">$1,029,300 / $1,051,300</th></tr>
+            </table>
           </div>
-          <p class="note">Applying the four primary comps' average of $188.12/SF to the 5,647 SF heated area indicates roughly $1,062,000; the broader 9-comp average of $169.06/SF indicates roughly $955,000, and the comp set's median ($162.50/SF) indicates roughly $918,000. Weighing the primary, size- and use-comparable sales most heavily and tempering for the subject's specialized veterinary buildout (kennels, surgical suite, exam rooms) and 1949/1999 vintage, Grant-Murray Real Estate's opinion is an indicated value range of approximately <strong>$850,000 to $1,075,000</strong>, with a recommended list price of <strong>$975,000</strong> (~$172.66/SF heated) to allow room for negotiation. This is a broker's opinion of value for marketing purposes, not an appraisal.</p>
+          <p class="note">The draft listing agreement shows $975,000 and should be updated to the new list price before signing. Grant-Murray Real Estate also receives 25% of any option fees or forfeited earnest money, as stated in the draft agreement. Net figures are before loan payoff, prorations and the owner's tax obligations.</p>
         </div>
-        <p class="note">Comparable sales data: CoStar Sale Comps Summary report, Cumberland County / Fayetteville, NC office properties, licensed to Grant-Murray Real Estate, LLC (license #376672), pulled 7/27/2026. <a href="https://www.dropbox.com/scl/fi/e6vx1txtcijb5zebsq65l/report-14.pdf?rlkey=ljydpfhk9o5kufvn0pe85cw20&amp;dl=0" target="_blank" rel="noopener">View the full CoStar comps report (PDF)</a>.</p>
       </div>
     </section>
 
     <section class="alt">
+      <div class="container">
+        <h2>Limitations</h2>
+        <div class="disclaimer" style="margin-top:0">This Broker Price Opinion was prepared by Patrick Murray, CCIM, SIOR, of Grant-Murray Real Estate, LLC for the owner's use in making listing and sale decisions. It is not an appraisal and does not constitute a certified valuation under USPAP. Adjustments, cost, income and carrying-cost estimates reflect the broker's professional judgment based on CoStar and public-record sales, county tax data, police open data and the published sources cited, as of November 20, 2026. The property was not inspected for environmental, structural or code conditions. Crime data shows reported incidents only and is not a prediction of future activity. All figures are subject to verification, changing market conditions and buyer due diligence.</div>
+      </div>
+    </section>
+
+    <section>
       <div class="container two-col">
         <div class="card">
           <h3>Prepared by</h3>
-          <p><strong>Patrick Murray, CCIM, SIOR</strong><br/>Broker / Owner<br/>Grant-Murray Real Estate, LLC</p>
+          <p><strong>Patrick Murray, CCIM, SIOR</strong><br/>Principal / Broker in Charge<br/>Grant-Murray Real Estate, LLC</p>
           <p style="margin-top:.75rem">150 N. McPherson Church Rd<br/>Fayetteville, NC 28303</p>
-          <p style="margin-top:.75rem">O: 910.829.1617<br/>patrick@grantmurrayre.com<br/><a href="https://www.grantmurrayre.com" target="_blank" rel="noopener">grantmurrayre.com</a></p>
+          <p style="margin-top:.75rem">O: 910.829.1617<br/>patrick@grantmurrayre.com</p>
         </div>
         <div class="card">
           <h3>Prepared for</h3>
           <p><strong>Mary Pyche</strong><br/>3309 Bragg Blvd, LLC<br/>289 Garden St, Lake Helen, FL 32744</p>
-          <p class="disclaimer">This Broker Price Opinion (BPO) is prepared by Patrick Murray, CCIM, SIOR, of Grant-Murray Real Estate, LLC. It is not an appraisal and does not constitute a certified valuation under USPAP. The value conclusions herein are based on comparable market sales data and the broker's professional judgment as of the date noted, and are subject to verification, changing market conditions, and further due diligence.</p>
         </div>
       </div>
     </section>
@@ -311,10 +422,7 @@
   <footer>
     <div class="container footer-inner">
       <img class="footer-logo" src="assets/gm-logo.svg" alt="Grant-Murray Real Estate" />
-      <div>
-        Broker Price Opinion — prepared 7/27/2026.<br/>
-        Prepared by Grant-Murray Real Estate | CCIM | SIOR
-      </div>
+      <div>Broker Price Opinion, updated 11/20/2026 (original 7/27/2026).<br/>Grant-Murray Real Estate, LLC · CCIM · SIOR</div>
     </div>
   </footer>
 </body>
